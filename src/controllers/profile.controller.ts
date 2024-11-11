@@ -18,7 +18,7 @@ import AuthService from "../services/auth.service";
  **/
 export const getUsers = catchAsync(async(req: Request, res: Response, next: NextFunction)=>{
   try {
-      const profile = await ProfileService.getUsers()
+      const profile = await ProfileService.getUsers(req.user?.id)
 
       if(!profile ) {
           return next(new AppError("No user found", ResponseHelper.RESOURCE_NOT_FOUND))
