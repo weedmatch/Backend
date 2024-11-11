@@ -3,14 +3,16 @@ import User from "../models/user.model";
 
 export default class ProfileService {
 
-  static async getUsers(): Promise<Iuser[]> {
+  static async getUsers(userId: string): Promise<Iuser[]> {
     const userProfile = await User.find()
     .populate("weedprofile")
 
     if (!userProfile) {
       return [];
     }
-    return userProfile;
+  const filteredProfiles = userProfile.filter((user: any) => user._id.toString() !== userId);
+
+  return filteredProfiles;
   }
   
 
