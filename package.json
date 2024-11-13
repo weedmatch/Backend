@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.ts",
-    "build": "rimraf ./dist && tsc --outDir ./dist/src && echo 'dist folder created'",
+    "build": "rimraf ./dist && tsc --outDir ./dist/src && echo 'dist folder created' && cp -R src/templates dist/src/templates",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node dist/src/server.js",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"

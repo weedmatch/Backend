@@ -26,4 +26,4 @@ const connectToDatabase = async () =>{
 
 export default connectToDatabase;
 
-// mongodb://localhost:27017/dispatch
+// mongodb://localhost:27017/weed
