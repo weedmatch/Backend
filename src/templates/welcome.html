@@ -103,36 +103,10 @@
     </style>
     </head>
     <body>
-        <header>
-            <div id="logo">
-                <div>
-                    <img
-                        src="image/icon.svg"
-                        alt="icon"
-                        height="34px"
-                        width="27px"
-                    >
-                </div>
-                <div>
-                    <img
-                        src="image/type.svg"
-                        alt="icon"
-                        height="34px"
-                        width="183px"
-                    >
-                </div>
-            </div>  
-        </header>
-        <div>
-            <img id="banner"
-            src="image/Frame.png"
-            alt="frame"
-            >
-        </div>
 
         <div id="main">
             <div id="section">
-                <h1 id="first">Hi {{fullname}},</h1>           
+                <h1 id="first">Hi {{username}},</h1>           
                 <p>
                     Welcome </br>
 
@@ -140,7 +114,7 @@
                 </p>
             </div>
             <p>
-              Here is your One Time Password {{otp}}.</br> 
+                Here is your One Time Password <strong>{{otp}}</strong>.</br> 
               Please enter this code to verify your email address for
           </p>
             <p>
