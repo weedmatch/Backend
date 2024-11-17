@@ -22,9 +22,9 @@ const compileTemplate = (templateName: string, placeholders?: Record<string, str
 
 const sendEmail = async (options: EmailOptions): Promise<void> => {
   try {
-    const user = 'ookpe91@gmail.com';
-    const pass = 'Vd7xZ6FfghypAvTP'
-    const host = 'smtp-relay.brevo.com'
+    const user = '';
+    const pass = ''
+    const host = ''
     const port = parseInt(process.env.SMTP_PORT || '587');
 
     const transporter = nodemailer.createTransport({
@@ -40,7 +40,7 @@ const sendEmail = async (options: EmailOptions): Promise<void> => {
     const html = compileTemplate(options.templateName, options.placeholders);
 
     const mailOptions = {
-      from: 'ookpe91@gmail.com',
+      from: '',
       to: options.to,
       subject: options.subject,
       html: html,
